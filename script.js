@@ -1,3 +1,10 @@
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const section = document.getElementById(id);
+
+    if (!section) {
+        console.error("Section not found:", id);
+        return;
+    }
+
+    section.scrollIntoView({ behavior: "smooth" });
 }
